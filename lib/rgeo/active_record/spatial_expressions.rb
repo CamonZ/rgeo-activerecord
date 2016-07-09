@@ -234,6 +234,18 @@ module RGeo
       def st_geometryn(n)
         SpatialNamedFunction.new("ST_GeometryN", [self, n.to_i], [true, true, false])
       end
+
+      #--
+      # Geometry Editors
+      #--
+
+      def st_force_2d
+        SpatialNamedFunction.new("ST_Force2D", [self], [true, true])
+      end
+
+      def st_force_3d
+        SpatialNamedFunction.new("ST_Force3D", [self], [true, true])
+      end
     end
   end
 end
